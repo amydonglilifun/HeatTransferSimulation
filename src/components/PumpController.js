@@ -1,5 +1,6 @@
 var flowSwitch = true;
 var bumpCount = 0;
+var timeOfDay = 0; // start from midnight 12:00 AM as 0, increasing by 1 every hour
 
 // Create a new instance of the SolarTank class
 let solar = new SolarPanel();
@@ -10,7 +11,7 @@ let heatTransfer = new HeatTransferService(solar, tank, 0.1);
 if (temperatureChartOption && typeof temperatureChartOption === 'object') {
     temperatureChart.setOption(temperatureChartOption);
 }
-  
+
 // swith flow betwwn heating and pumping
 setInterval(function () {
     if (flowSwitch) {
@@ -33,22 +34,14 @@ setInterval(function () {
 
         bumpCount += 1;
 
-        console.log(solar.temperature);
-        console.log(tank.temperature);
-
         // Fill the tank with a certain number of pumps
         tank.fill(bumpCount);
 
         // Receive some amount of heat
-        // console.log("=>" + heatTransfer.transferHeat());
         tank.receiveHeat(heatTransfer.transferHeat());
-
-        console.log(tank.temperature);
 
         // Get the temperature of the tank
         let temperature = tank.temperature;
-
-        console.log(temperature);
 
         // update temperature
         temperatureChart.setOption({
@@ -70,7 +63,13 @@ setInterval(function () {
             ]
         });
 
+        // Increase the time of day by 1 hour every 5 seconds
+        timeOfDay += 1;
+        if (timeOfDay > 23) {
+            timeOfDay = 0;
+        }
+
         // Solar continue to absorb sunlight
-        solar.absorbSunlight(1);
+        solar.absorbSunlight(timeOfDay);
     }
 }, 5000);
