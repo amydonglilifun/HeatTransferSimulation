@@ -9,7 +9,12 @@ class StorageTank {
     }
   
     fill(pumpCount) {
-      this.pumpCount += pumpCount;
+      if (pumpCount * this.pumpCapacity < this.maxCapacity) {
+        this.pumpCount += pumpCount;
+      }
+      else {
+        console.log('The tank is full!');
+      }
     }
 
     receiveHeat(heatTransferAmount) {
@@ -21,6 +26,7 @@ class StorageTank {
       return this.temperature > 99 ? 99 : this.temperature;
     }
 
+    // calculate the temperature increase based on the heat transfer amount
     heatToTemperature(heat) {
       let mass = 2; // in kilograms
       let specificHeatCapacity = 4186; // in J/kg°C for water
