@@ -1,0 +1,109 @@
+svg {
+  width: 100vmin;
+  height: 100vmin;
+}
+
+#sun {
+  position: absolute;
+  margin-top: -500px;
+  margin-left: 25px;
+  /* background-color: #ffffff;
+  background-image: url("src/assets/img/animated_sun.gif"); */
+}
+
+#flow_pumping{
+  position: absolute;
+  margin-top: 287px;
+  margin-left: 48px;
+}
+
+#dot_line_sun_1 {
+  position: absolute;
+  margin-top: -420px;
+  margin-left: 100px;
+}
+#dot_line_sun_2 {
+  position: absolute;
+  margin-top: -420px;
+  margin-left: 50px;
+}
+
+#dot_line_water_flow_hot_1 {
+  position: absolute;
+  margin-top: -520px;
+  margin-left: 510px;
+}
+
+#dot_line_water_flow_hot_2 {
+  position: absolute;
+  margin-top: -520px;
+  margin-left: 300px;
+}
+
+#dot_line_water_flow_hot_3 {
+  position: absolute;
+  margin-top: -635px;
+  margin-left: 205px;
+}
+
+#dot_line_water_flow_hot_4 {
+  position: absolute;
+  margin-top: -635px;
+  margin-left: 300px;
+}
+
+#dot_line_water_flow_cold_1 {
+  position: absolute;
+  margin-top: -470px;
+  margin-left: 157px;
+}
+
+#dot_line_water_flow_cold_2 {
+  position: absolute;
+  margin-top: -393px;
+  margin-left: 157px;
+}
+
+#dot_line_water_flow_hotdrop_1 {
+  position: absolute;
+  margin-top: -510px;
+  margin-left: 705px;
+}
+#dot_line_water_flow_hotdrop_2 {
+  position: absolute;
+  margin-top: -510px;
+  margin-left: 705px;
+}
+
+#hotwater_block {
+  position: absolute;
+  margin-top: -110px;
+  margin-left: 761px;
+}
+
+#flow_heating_coldtohot {
+  position: absolute;
+  margin-top: -240px;
+  margin-left: 203px;
+  display: none;
+}
+#dot_line_coldtohot_2 {
+  position: absolute;
+  margin-top: -720px;
+  margin-left: 13px;
+}
+#dot_line_coldtohot_3 {
+  position: absolute;
+  margin-top: -750px;
+  margin-left: 13px;
+}
+#dot_line_coldtohot_4 {
+  position: absolute;
+  margin-top: -780px;
+  margin-left: 13px;
+}
+#dot_line_coldtohot_5 {
+  position: absolute;
+  margin-top: -680px;
+  margin-left: 13px;
+}

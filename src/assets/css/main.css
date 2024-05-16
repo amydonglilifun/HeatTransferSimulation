@@ -1,0 +1,91 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 30px;
+    font-family: "Georgia, serif";
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  #monitoring_heating {
+    position: absolute;
+    font-size: 40px;
+    font-family: "Georgia, serif";
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -500px;
+    margin-left: 300px;
+    color: orange;
+    display: none;
+  }
+
+  #monitoring_pumping {
+    position: absolute;
+    font-size: 40px;
+    font-family: "Georgia, serif";
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -500px;
+    margin-left: 300px;
+    color: #3d3e3d;
+    display: block;
+  }
+
+  #tank_temperature {
+    position: absolute;
+    font-size: 25px;
+    font-family: "Georgia, serif";
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -300px;
+    margin-left: 860px;
+    color: #3d3e3d;
+    display: block;
+  }
+
+  #dataTable {
+    position: absolute;
+    font-size: 20px;
+    font-family: "Georgia, serif";
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -500px;
+    margin-left: 600px;
+    color: #3d3e3d;
+  }
+
+  #header {
+    background-color: #3d3e3d;
+    height: 50px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  #diagram {
+    height: 500px;
+    width: 900px;
+    background-image: url("../img/diagram.jpg");
+    margin-top: 80px;
+  }
+  
+  #container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-top: -260px;
+    margin-left: 900px;
+    transform-origin: 20% 20%;
+    background: white;
+  }
+
+  #myPlot {
+    position: absolute;
+    width: 300px;
+    height: 260px;
+    margin-top: -220px;
+    margin-left: 650px;
+  }
+
