@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simulation on Solar Panel and Solar Water Tank </title>
+  <meta charset="utf-8">
+  <link href="src/assets/css/main.css" rel="stylesheet">
+  <link href="src/assets/css/svg.css" rel="stylesheet">
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  <script src="lib/anime.min.js"></script>
+  
+</head>
+
+<body>
+  <div id="header">
+    Simulation on Solar Panel and Solar Water Tank 
+  </div>
+  <div id="content">
+
+    <div id="diagram"></div>
+
+    <div id="sun"><img src="src/assets/img/animated_sun.gif" width="120" height="120" /></div>
+
+    <div id="container"></div>
+
+    <div id="flow_sunshine" >
+    <div id="dot_line_sun_1">
+      <svg>
+        <path 
+            d="M 30 10 L 120 88"
+            stroke-miterlimit="5" 
+            fill="none" 
+            stroke="orange"
+            stroke-width="2"
+            stroke-dasharray="10"
+            stroke-dashoffset="1">
+            <animate
+                attributeName="stroke-dashoffset"
+                values="80;0"
+                dur="3s"
+                calcMode="linear"
+                repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
+    <div id="dot_line_sun_2">
+      <svg>
+        <path 
+            d="M 30 10 L 120 88"
+            stroke-miterlimit="5" 
+            fill="none" 
+            stroke="orange"
+            stroke-width="2"
+            stroke-dasharray="10"
+            stroke-dashoffset="1">
+            <animate
+                attributeName="stroke-dashoffset"
+                values="80;0"
+                dur="3s"
+                calcMode="linear"
+                repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>
+
+    <div id="flow_pumping" >
+      <div id="dot_line_water_flow_hot_1">
+        <svg width="250" height="250">
+          <path 
+              d="M 30 30 L 200 30"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_water_flow_hot_2">
+        <svg>
+          <path 
+              d="M 30 30 L 130 30"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_water_flow_hot_3">
+        <svg >
+          <path 
+              d="M 30 30 L 120 30"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_water_flow_hot_4">
+        <svg >
+          <path 
+              d="M 30 30 L 30 140"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+
+      <div id="dot_line_water_flow_cold_1">
+        <svg>
+          <path 
+              d="M 30 10 L 30 100"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="blue"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="0;100"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+
+      <div id="dot_line_water_flow_cold_2">
+        <svg>
+          <path 
+              d="M 30 30 L 540 30"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="blue"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="0;100"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+
+      <div id="dot_line_water_flow_hotdrop_1">
+        <svg >
+          <path 
+              d="M 30 30 L 40 70"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_water_flow_hotdrop_2">
+        <svg >
+          <path 
+              d="M 30 30 L 20 70"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+
+    </div>
+    </div>
+    <div>
+
+    <div id="flow_heating_coldtohot">
+      <div id="dot_line_coldtohot_1">
+        <svg>
+          <path 
+              d="M 30 30 L 90 30"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="blue"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="0;100"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_coldtohot_2">
+        <svg>
+          <path 
+              d="M 20 20 L 70 20"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_coldtohot_3">
+        <svg>
+          <path 
+              d="M 20 20 L 70 20"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="blue"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="0;100"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_coldtohot_4">
+        <svg>
+          <path 
+              d="M 20 20 L 70 20"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+      <div id="dot_line_coldtohot_5">
+        <svg>
+          <path 
+              d="M 20 20 L 70 20"
+              stroke-miterlimit="10" 
+              fill="none" 
+              stroke="red"
+              stroke-width="5"
+              stroke-dasharray="10"
+              stroke-dashoffset="1">
+              <animate
+                  attributeName="stroke-dashoffset"
+                  values="100;0"
+                  dur="3s"
+                  calcMode="linear"
+                  repeatCount="indefinite" />
+          </path>
+          </svg>
+      </div>
+    </div>
+
+      <div id="monitoring_heating">
+        HEATING ...
+      </div>
+      <div id="monitoring_pumping">
+        PUMPING ...
+      </div>
+  </div>
+
+  <div id="tank_temperature">
+    Storage Tank Temperature
+  </div>
+
+  <div id="dataTable">
+    Solar Tank Max Capacity 80 Gals <br />
+    Scheduled pump every 5 secs<br />
+  </div>
+  
+  <div id="measure">
+    <script src="src/services/StorageTank.js"></script>
+    <script src="src/services/SolarPanel.js"></script>
+    <script src="src/services/HeatTransferService.js"></script>
+    <script src="src/components/TemperatureContainer.js"></script>
+    <script src="src/components/PumpController.js"></script>
+</div>
+
+</body>
+</html>
